@@ -1,0 +1,18 @@
+<h1>Add a Restaurant</h1>
+
+<form action="/restaurants" method="post">
+  <input type="text" name="name">
+  <input type="text" name="address">
+  <input type="text" name="rating">
+  <input type="submit">
+</form>
+
+<%= form_for(@restaurant) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+
+<% end %>
